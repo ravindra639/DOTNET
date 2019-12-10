@@ -1,11 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-  </PropertyGroup>
-
-
-  <ItemGroup>
+  <TargetFrameworks>netcoreapp2.1;netcoreapp3.0;net45;net46;net47</TargetFrameworks>
+   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.0'">
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.CSharp">
+      <Version>4.6.0</Version>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
