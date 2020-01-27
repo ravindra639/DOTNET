@@ -1,0 +1,9 @@
+C:\WEB_APPS\WinForm\WinForm\bin\Debug\WinForm.exe.config
+C:\WEB_APPS\WinForm\WinForm\bin\Debug\WinForm.exe
+C:\WEB_APPS\WinForm\WinForm\bin\Debug\WinForm.pdb
+C:\WEB_APPS\WinForm\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
+C:\WEB_APPS\WinForm\WinForm\obj\Debug\WinForm.Form1.resources
+C:\WEB_APPS\WinForm\WinForm\obj\Debug\WinForm.Properties.Resources.resources
+C:\WEB_APPS\WinForm\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
+C:\WEB_APPS\WinForm\WinForm\obj\Debug\WinForm.exe
+C:\WEB_APPS\WinForm\WinForm\obj\Debug\WinForm.pdb
