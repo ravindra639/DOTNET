@@ -15,7 +15,6 @@ pipeline {
         checkout([$class: 'GitSCM', branches: [[name: "*/${GIT_BRANCH}"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ravindra639/DOTNET.git']]])
         //bat 'C:\\WS\\Nuget\\v5.3.1\\nuget restore %WORKSPACE%\\WebApp\\WebApp.sln'
         bat '''
-        cd WebApp
         MSBuild WinForm.sln /p:Configuration=Release /property:OutDir=\\INGBTCPIC6NB011\Publish\WinApp1 /p:Platform=\"Any CPU\" '''
       }
     }
