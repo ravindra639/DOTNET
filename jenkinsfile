@@ -13,10 +13,6 @@ pipeline {
     stage('BUILD') {
       steps {
         checkout([$class: 'GitSCM', branches: [[name: "*/${GIT_BRANCH}"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ravindra639/DOTNET.git']]])
-        bat 'C:\\WS\\Nuget\\v5.3.1\\nuget restore %WORKSPACE%\\WebApp\\WebApp.sln'
-        bat '''
-        cd WebApp
-        MSBuild WebApp.sln /p:Configuration=Release /p:Platform=\"Any CPU\" '''
         bat '''
         cd %WORKSPACE%\\Firstservice
         MSBuild Firstservice.sln /p:Configuration=Release /p:Platform=\"Any CPU\" '''
