@@ -1,3 +1,3 @@
 sc stop WindowsDemoService
-sc delete WindowsDemoService
+REM sc delete WindowsDemoService
 if %ERRORLEVEL% == 1 (exit 0)
