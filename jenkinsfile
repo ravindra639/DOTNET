@@ -13,7 +13,7 @@ pipeline {
   stages {
     stage('BUILD') {
       steps {
-        //checkout([$class: 'GitSCM', branches: [[name: "*/${GIT_BRANCH}"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ravindra639/DOTNET.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: "*/${GIT_BRANCH}"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ravindra639/DOTNET.git']]])
         bat '''
         cd %WORKSPACE%\\Firstservice
         MSBuild Firstservice.sln /p:Configuration=Release /p:Platform=\"Any CPU\" '''
