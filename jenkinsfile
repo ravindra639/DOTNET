@@ -16,7 +16,9 @@ pipeline {
         bat '''
         cd %WORKSPACE%\\Firstservice
         MSBuild Firstservice.sln /p:Configuration=Release /p:Platform=\"Any CPU\" '''
-        bat "${WORKSPACE}\\Firstservice\\service.bat"
+        //bat "${WORKSPACE}\\Firstservice\\service.bat"
+	bat "${WORKSPACE}\\Firstservice\\DeleteService.bat"
+	bat "${WORKSPACE}\\Firstservice\\InstallService.bat"
       }
     }
   }
