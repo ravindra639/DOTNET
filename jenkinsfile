@@ -7,16 +7,17 @@ pipeline {
   options {
         disableConcurrentBuilds()
         timestamps()
+	//skipDefaultCheckout true
     }
   agent { label 'slave1' }
   stages {
     stage('BUILD') {
       steps {
+        bat "${WORKSPACE}\\Firstservice\\DeleteService.bat"
         checkout([$class: 'GitSCM', branches: [[name: "*/${GIT_BRANCH}"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ravindra639/DOTNET.git']]])
         bat '''
         cd %WORKSPACE%\\Firstservice
         MSBuild Firstservice.sln /p:Configuration=Release /p:Platform=\"Any CPU\" '''
-	bat "${WORKSPACE}\\Firstservice\\DeleteService.bat"
 	bat "${WORKSPACE}\\Firstservice\\InstallService.bat"
       }
     }
