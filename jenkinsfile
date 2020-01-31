@@ -7,7 +7,7 @@ pipeline {
   options {
         disableConcurrentBuilds()
         timestamps()
-	skipDefaultCheckout true
+	//skipDefaultCheckout true
     }
   agent { label 'slave1' }
   stages {
